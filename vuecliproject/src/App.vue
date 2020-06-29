@@ -1,28 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App FFF"/>
-  </div>
+    <div id="app">
+        <div class="wrapper">
+        <div class="lang_wrapper">
+            <LocaleSwitcher/>
+            </div>
+            <Main/>
+        </div>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    import Main from './components/Main.vue'
+    import LocaleSwitcher from './components/LocaleSwitcher.vue'
+    import Vue from 'vue'
+    import {BootstrapVue, IconsPlugin} from 'bootstrap-vue'
+
+    // Install BootstrapVue
+    Vue.use(BootstrapVue)
+    // Optionally install the BootstrapVue icon components plugin
+    Vue.use(IconsPlugin)
+
+    import 'bootstrap/dist/css/bootstrap.css'
+    import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+    export default {
+        name: 'App',
+        components: {
+            Main,
+            LocaleSwitcher
+        }
+    }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    @import 'css/main.css';
 </style>
