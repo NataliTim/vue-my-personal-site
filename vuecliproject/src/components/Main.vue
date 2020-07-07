@@ -22,9 +22,6 @@
     export default {
         data() {
             return {
-                dismissSecs: 10,
-                dismissCountDown: 0,
-                showDismissibleAlert: false
             }
         },
         components: {
